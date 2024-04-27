@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Université WILLIAM BOOTH</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+  <link rel="stylesheet" href="assets/css/additional.css">
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="vendor/isjoverform/isjoverform.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+</head>
+
+<body>
+
+  <!-- ***** Login Form start ***** -->
+  <div class="isjoverform2 isjform-hide">
+    <div id="signupFrm" class="signupFrm">
+      <div class="wrapper">
+        <form id="connexion-form" action="./mainenginephp/connexion.php" method="post" class="form">
+          <div class="row-isj gap-3">
+            <a href="index.html" class="logo">
+              <div class="row-isj">
+                <img src="./assets/images/logo_uwb.png" alt="logo uwb">
+                <h1>UWB</h1>
+              </div>
+            </a>
+            <span id="connexion-txt">Êtes-vous Professeur ou étudiant ?</span>
+          </div>
+          <br>
+          <h1 class="title">connectez-vous</h1>
+          <input id="act" style="display: none;" name="act" type="text" value="">
+          <br>
+          <div class="inputContainer">
+            <input id="useremail" name="useremail" type="email" placeholder="a" class="input" required>
+            <label for="useremail" class="label">Email</label>
+          </div>
+          <div class="inputContainer">
+            <input id="userpassword" name="userpassword" type="password" placeholder="a" class="input" required>
+            <label for="userpassword" class="label">Password</label>
+          </div>
+          <input id="rememberuser" name="rememberuser" type="checkbox"> <label for="rememberuser">Se souvenir
+            de moi</label>
+          <div class="forgot">
+            <a style="color: var(--primary-color);" href="">Mot de passe oublié?</a>
+          </div>
+          <div style="margin-top: 15px;" class="row-isj">
+            <input id="connexion" type="submit" class="btn-isj primary-btn" value="Se connecter">
+            <span onclick="closeIsjForm2(0)" class="btn-isj secondary-btn">Annuler</span>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="col-12 nav-menu-container">
+      <nav class="main-nav">
+        <!-- ***** Logo Start ***** -->
+        <a href="index.html" class="logo">
+          <div class="row-isj">
+            <img src="./assets/images/logo_uwb.png" alt="logo uwb">
+            <h1>UWB</h1>
+          </div>
+        </a>
+        <!-- ***** Logo End ***** -->
+        <!-- ***** Serach Start *****
+        <div class="search-input">
+          <form id="search" action="#">
+            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
+              onkeypress="handle" />
+            <i class="fa fa-search"></i>
+          </form>
+        </div>
+        ***** Serach Start ***** -->
+        <!-- ***** Menu Start ***** -->
+        <input type="checkbox" id="hamburger-check">
+        <ul class="nav">
+          <li class="scroll-to-section"><a href="#top" class="menu-item active">Accueil</a></li>
+          <li class="scroll-to-section"><a href="#facultes" class="menu-item">Facultés</a></li>
+          <li onclick="showIsjForm2(0,'prof')" class="scroll-to-section menu-item">Professeur</li>
+          <li onclick="showIsjForm2(0)" class="scroll-to-section menu-item">Etudiant</li>
+          <li class="scroll-to-section"><a class="menu-item" href="#team">A propos</a></li>
+          <li class="scroll-to-section"><a class="menu-item" href="#annonces">Annonces</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <div class="btn-isj primary-btn"><a href="#">Inscription</a></div>
+
+          <div class="dropdown">
+            <i class="fa fa-user-alt user-logo"></i>
+            <div class="dropdown-content">
+              <p>Username</p>
+              <b>Professeur</b>
+            </div>
+          </div>
+
+          <div class="bell-container">
+            <i class="fa fa-bell"></i>
+            <p class="notif-num">10</p>
+          </div>
+        </div>
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <!-- ***** Menu End ***** -->
+      </nav>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main banner start ***** -->
+  <div class="main-banner" id="top">
+    <div class="welcome-area">
+      <div class="row-isj space-between">
+        <div class="header-text">
+          <div class="header-text-contain">
+            <h1 class="main-title">Bienvenue à L'Université <br><b class="red-color">WILLIAM BOOTH</b></h1>
+            <img class="main-logo" src="./assets/images/logo_uwb.png" alt="logo uwb">
+          </div>
+        </div>
+        <div class="owl-carousel owl-banner">
+          <div class="item back1">
+          </div>
+          <div class="item back2">
+          </div>
+          <div class="item back3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Main banner End ***** -->
+
+  <!-- ***** Facultes section start ***** -->
+  <div class="facultes section" id="facultes">
+    <h1>Nos Facultés</h1>
+    <div class="container">
+      <div class="row event_box">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
+              <h2 class="category">Droit</h2>
+              <div class="row-isj gap-2">
+                <span>Vacations :</span>
+                <div class="disbled-btn">Matin</div>
+                <div class="disbled-btn">Soir</div>
+              </div>
+            </div>
+            <div class="down-content">
+              <span class="author">Système LMD (licencié en 3 ans)</span>
+              <h4>Maîtrisez les droits et spécialisez-vous</h4>
+              <br>
+              <div class="btn-isj primary-btn"><a href="#">S'inscrire</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/med.jpg" alt=""></a>
+              <h2 class="category">Médecine</h2>
+              <div class="row-isj gap-2">
+                <span>Vacations :</span>
+                <div class="disbled-btn">Matin</div>
+                <div class="disbled-btn">Soir</div>
+              </div>
+            </div>
+            <div class="down-content">
+              <span class="author">Système LMD (licencié en 3 ans)</span>
+              <h4>Spécialisez-vous dans les domaines de la médecine</h4>
+              <br>
+              <div class="btn-isj primary-btn"><a href="#">S'inscrire</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
+              <h2 class="category">Sciences de l'Information et de la Communication</h2>
+              <div class="row-isj gap-2">
+                <span>Vacations :</span>
+                <div class="disbled-btn">Matin</div>
+                <div class="disbled-btn">Soir</div>
+              </div>
+            </div>
+            <div class="down-content">
+              <span class="author">Système LMD (licencié en 3 ans)</span>
+              <h4>Devenez expert(e) en Communication</h4>
+              <br>
+              <div class="btn-isj primary-btn"><a href="#">S'inscrire</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
+              <h2 class="category">Sciences Economiques et de Gestion</h2>
+              <div class="row-isj gap-2">
+                <span>Vacations :</span>
+                <div class="disbled-btn">Matin</div>
+                <div class="disbled-btn">Soir</div>
+              </div>
+            </div>
+            <div class="down-content">
+              <span class="author">Système LMD (licencié en 3 ans)</span>
+              <h4>Devenez Expert(e) en économie et en gestion</h4>
+              <br>
+              <div class="btn-isj primary-btn"><a href="#">S'inscrire</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
+              <h2 class="category">Science Informatique & Intelligence Artificielle</h2>
+              <div class="row-isj gap-2">
+                <span>Vacations :</span>
+                <div class="disbled-btn">Matin</div>
+                <div class="disbled-btn">Soir</div>
+              </div>
+            </div>
+            <div class="down-content">
+              <span class="author">Système LMD (licencié en 3 ans)</span>
+              <h4>Apprenez l'Informatique et l'Intelligence Artificielle</h4>
+              <br>
+              <div class="btn-isj primary-btn"><a href="#">S'inscrire</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Facultes section End ***** -->
+
+  <!-- ***** Valeurs section start ***** -->
+  <div class="valeurs section">
+    <div class="container">
+      <h1>Nos Valeurs</h1>
+      <div class="owl-carousel owl-theme owl-carousel-valeurs">
+        <div class="item dignite">
+          <div class="events_item">
+            <div class="column-isj">
+              <h2>Dignité</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dicta veniam, impedit eius quasi
+                nisi
+                libero explicabo! Quidem tempore</p>
+            </div>
+          </div>
+        </div>
+        <div class="item honneur">
+          <div class="events_item">
+            <div class="column-isj">
+              <h2>Honneur</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dicta veniam, impedit eius quasi
+                nisi
+                libero explicabo! Quidem tempore</p>
+            </div>
+          </div>
+        </div>
+        <div class="item excellence">
+          <div class="events_item">
+            <div class="column-isj">
+              <h2>Excellence</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dicta veniam, impedit eius quasi
+                nisi
+                libero explicabo! Quidem tempore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ***** Valeurs section End ***** -->
+
+
+  <div class="services section" id="services">
+    <div class="container">
+      <h1>Ce que nous proposons</h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-01.png" alt="online degrees">
+            </div>
+            <div class="main-content">
+              <h4>Des cours à vacation matin</h4>
+              <p>Whenever you need free templates in HTML CSS, you just remember TemplateMo website.</p>
+              <div class="btn-isj secondary-btn">
+                <a href="#">En Savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-02.png" alt="short courses">
+            </div>
+            <div class="main-content">
+              <h4>Des cours à vacation soir</h4>
+              <p>You can browse free templates based on different tags such as digital marketing, etc.</p>
+              <div class="btn-isj secondary-btn">
+                <a href="#">En Savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-03.png" alt="web experts">
+            </div>
+            <div class="main-content">
+              <h4>Formation d'Excellence</h4>
+              <p>You can start learning HTML CSS by modifying free templates from our website too.</p>
+              <div class="btn-isj secondary-btn">
+                <a href="#">En Savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="1500000" data-speed="1000"></h2>
+                  <p class="count-text ">Etudiants depuis la fondation</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="1000000" data-speed="1000"></h2>
+                  <p class="count-text ">Intégrations dans la société</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
+                  <p class="count-text ">Eminents Professeurs</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter end">
+                  <h2 class="timer count-title count-number" data-to="25" data-speed="1000"></h2>
+                  <p class="count-text ">Ans D'Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----Team Section----->
+  <div class="team section" id="team">
+    <div class="section about-us">
+      <div class="container">
+        <div class="row flex-wrap-reverse">
+          <div class="col-lg-6 offset-lg-1">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Comment avons-nous commencé?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                    incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Comment travaillons nous ensemble?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                    incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Pourquoi sommes-nous MEILLEUR?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    There are more than one hundred responsive HTML templates to choose from <strong>Template</strong>Mo
+                    website. You can browse by different tags or categories.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Notre impact dans la SOCIETE?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    You can also search on Google with specific keywords such as
+                    <code>templatemo business templates, templatemo gallery templates, admin dashboard templatemo, 3-column templatemo, etc.</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 align-self-center mb-5">
+            <div class="section-heading">
+              <h1 class="red-color">A propos de nous</h1>
+              <h2>Qu'est ce qui nous différencie des autres ?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.</p>
+              <div class="btn-isj primary-btn">
+                <a href="#">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div style="margin: 100px 0px 200px 0px;" class="col-lg-12 text-center">
+        <div class="section-heading">
+          <h2>Comité de gestion</h2>
+        </div>
+      </div>
+      <div class="row alju-items--center">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/recteur.jpg" alt="">
+              <span class="category">Recteur</span>
+              <h4>Roger BIMWALA MAMPUYA</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/sec1.jpg" alt="">
+              <span class="category">Secrétaire Général Académique</span>
+              <h4>Cindy Walker</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/sec2.jpg" alt="">
+              <span class="category">Secrétaire Général Académique</span>
+              <h4>Bernard NZINGA LUZI</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section testimonials">
+    <div class="container">
+      <div class="row flex-wrap-reverse">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials owl-theme">
+            <div class="item">
+              <div class="author">
+                <img src="assets/images/testimonial-author.jpg" alt="">
+                <span class="category">Full Stack Master</span>
+                <h4>Claude David</h4>
+              </div>
+              <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the website to
+                download free templates. Thank you for visiting.”</p>
+            </div>
+            <div class="item">
+              <div class="author">
+                <img src="assets/images/testimonial-author.jpg" alt="">
+                <span class="category">UI Expert</span>
+                <h4>Thomas Jefferson</h4>
+              </div>
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”</p>
+            </div>
+            <div class="item">
+              <div class="author">
+                <img src="assets/images/testimonial-author.jpg" alt="">
+                <span class="category">Digital Animator</span>
+                <h4>Stella Blair</h4>
+              </div>
+              <p>“Scholar is free website template provided by TemplateMo for educational related websites. This CSS
+                layout is based on Bootstrap v5.3.0 framework.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h1 class="red-color">TEMOIGNAGES</h1>
+            <h2>Ce qu'il disent de nous</h2>
+            <p>Nos valeurs et la qualité de nos formations sont très appreciés</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section events" id="events">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h1 class="red-color">Calendrier</h1>
+            <h2>Les Evénements à venir</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-01.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Web Design</span>
+                    <h4>UI Best Practices</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>16 Feb 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>22 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$120</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-02.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Front End</span>
+                    <h4>New Design Trend</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>24 Feb 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>30 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$320</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-03.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Full Stack</span>
+                    <h4>Web Programming</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>12 Mar 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>48 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$440</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  align-self-center">
+          <div class="section-heading">
+            <h1 class="red-color">Contactez-nous</h1>
+            <h2>Sentez-vous à l'aise de nous contacter</h2>
+            <p>Dites-nous de quoi vous avez besoin et votre préoccupation, nous vous répondrons au plus rapidement
+              possible.</p>
+            <div class="special-offer">
+              <span class="offer">off<br><em>50%</em></span>
+              <h6>Valide: <em>24 April 2024</em></h6>
+              <h4>Special Offer <em>50%</em> OFF!</h4>
+              <a href="#"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Ton nom..." autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Ton Email..."
+                      required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Ton Message"></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Envoyer le Message</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <p>Copyright © 2024 Université WILLIAM BOOTH. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
+            href="#" rel="nofollow" target="_blank">ISWA</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="vendor/isjoverform/isjoverform.js"></script>
+
+</body>
+
+</html>

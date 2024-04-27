@@ -1,0 +1,107 @@
+.isjform-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1,1);
+    transition: transform 300ms ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    background-color: #00000060;
+}
+.isjform-hide{
+    z-index: 0;
+    transform: scale(0.0,0.0);
+    transition: transform 300ms ease-in-out;
+    opacity: 0;
+    position: absolute;
+}
+
+.isjform-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width: 450px;
+    overflow-y: scroll;
+    scrollbar-color: rgba(64, 64, 65, 0.738) rgba(0, 128, 0, 0);
+    max-height: 100vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+}
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px 20px;
+}
+.form {
+    background-color: white;
+    max-width: 350px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.inputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 40px;
+    margin-bottom: 17px;
+    margin-top: 10px;
+}
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+.label {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #323f58;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+.input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+.inputContainer input::placeholder {
+    color: transparent;
+}
